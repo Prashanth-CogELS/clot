@@ -48,11 +48,16 @@
     </profiles>
     <build>
         <plugins>
-		    <plugin>
+		<plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>1.9.0</version>
                 <configuration>
+		   <remoteConfig>
+                   <startServersBeforeTests>true</startServersBeforeTests>
+                   <serverList>10.168.190.6</serverList>
+                   <stopServersAfterTests>true</stopServersAfterTests>
+                   </remoteConfig>
                     <testResultsTimestamp>false</testResultsTimestamp>
                     <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
