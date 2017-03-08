@@ -22,7 +22,7 @@
         <performancetest.responseTimeout>3000</performancetest.responseTimeout>
         <performancetest.threadCount>20</performancetest.threadCount>
         <performancetest.loopCount>10</performancetest.loopCount>
-		<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
+	<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
     </properties>
 
     <dependencies>
@@ -42,7 +42,7 @@
                 <performancetest.webservice.port>80</performancetest.webservice.port>
                 <performancetest.threadCount>5</performancetest.threadCount>
                 <performancetest.loopCount>5</performancetest.loopCount>
-				<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
+		<performancetest.ExamGroupID>10</performancetest.ExamGroupID>
             </properties>
         </profile>
     </profiles>
@@ -53,12 +53,7 @@
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>1.9.0</version>
                 <configuration>
-		   <remoteConfig>
-                   <startServersBeforeTests>true</startServersBeforeTests>
-                   <serverList>10.168.190.6</serverList>
-                   <stopServersAfterTests>true</stopServersAfterTests>
-                   </remoteConfig>
-                    <testResultsTimestamp>false</testResultsTimestamp>
+		            <testResultsTimestamp>false</testResultsTimestamp>
                     <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <ignoreResultFailures>true</ignoreResultFailures>
@@ -69,8 +64,7 @@
                         <webservice.connectTimeout>${performancetest.connectTimeout}</webservice.connectTimeout>
                         <webservice.responseTimeout>${performancetest.responseTimeout}</webservice.responseTimeout>
                         <threadCount>${performancetest.threadCount}</threadCount>
-                        <loopCount>${performancetest.threadCount}</loopCount>
-						<ExamGroupID>${performancetest.ExamGroupID}</ExamGroupID>
+                        <loopCount>${performancetest.threadCount}</loopCount>			         
                     </propertiesUser>
                     <propertiesJMeter>
                         <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
@@ -222,4 +216,3 @@
         </plugins>
     </build>
 </project>
-
